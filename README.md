@@ -1,11 +1,11 @@
-# Very short description of the package
+# Shufu Encoder PHP SDK
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/hoangstark/shufu-encoder-sdk.svg?style=flat-square)](https://packagist.org/packages/hoangstark/shufu-encoder-sdk)
 [![Build Status](https://img.shields.io/travis/hoangstark/shufu-encoder-sdk/master.svg?style=flat-square)](https://travis-ci.org/hoangstark/shufu-encoder-sdk)
 [![Quality Score](https://img.shields.io/scrutinizer/g/hoangstark/shufu-encoder-sdk.svg?style=flat-square)](https://scrutinizer-ci.com/g/hoangstark/shufu-encoder-sdk)
 [![Total Downloads](https://img.shields.io/packagist/dt/hoangstark/shufu-encoder-sdk.svg?style=flat-square)](https://packagist.org/packages/hoangstark/shufu-encoder-sdk)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+Use this SDK to login via username & password, then get the access token.
 
 ## Installation
 
@@ -18,7 +18,21 @@ composer require hoangstark/shufu-encoder-sdk
 ## Usage
 
 ``` php
-// Usage description here
+<?php
+
+namespace App\Http\Controllers;
+
+use Hoangstark\ShufuEncoderSdk\ShufuEncoderSdk;
+
+class LoginController extends Controller
+{
+    protected function login()
+    {
+        $shufuEncoder = new ShufuEncoderSdk;
+        $shufuEncoder->login('http://localhost/api/login', 'shufu', 'secret');
+        return $shufuEncoder->getAccessToken();
+    }
+}
 ```
 
 ### Testing
@@ -47,7 +61,3 @@ If you discover any security related issues, please email hoang@77-apps.com inst
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
