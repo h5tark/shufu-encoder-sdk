@@ -20,7 +20,7 @@ class ShufuEncoderSdk
             CURLOPT_FOLLOWLOCATION => false,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => array('email' => $username,'password' => $password),
+            CURLOPT_POSTFIELDS => array('username' => $username,'password' => $password),
         ));
 
         $response = curl_exec($curl);
