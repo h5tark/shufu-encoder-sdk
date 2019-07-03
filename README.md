@@ -2,7 +2,6 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/hoangstark/shufu-encoder-sdk.svg?style=flat-square)](https://packagist.org/packages/hoangstark/shufu-encoder-sdk)
 [![Build Status](https://img.shields.io/travis/hoangstark/shufu-encoder-sdk/master.svg?style=flat-square)](https://travis-ci.org/hoangstark/shufu-encoder-sdk)
-[![Quality Score](https://img.shields.io/scrutinizer/g/hoangstark/shufu-encoder-sdk.svg?style=flat-square)](https://scrutinizer-ci.com/g/hoangstark/shufu-encoder-sdk)
 [![Total Downloads](https://img.shields.io/packagist/dt/hoangstark/shufu-encoder-sdk.svg?style=flat-square)](https://packagist.org/packages/hoangstark/shufu-encoder-sdk)
 
 Use this SDK to login via username & password, then get the access token.
