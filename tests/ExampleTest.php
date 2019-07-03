@@ -7,11 +7,13 @@ use Hoangstark\ShufuEncoderSdk\ShufuEncoderSdk;
 
 class ExampleTest extends TestCase
 {
+    private $endPoint = 'https://b1d5ff40-c90d-4380-a9ad-9ce190807a21.mock.pstmn.io';
+
     /** @test */
     public function login()
     {
     	$shufuEncoder = new ShufuEncoderSdk;
-        $login = $shufuEncoder->login('http://localhost:8080/api', 'shufu', 'secret');
+        $login = $shufuEncoder->login($this->endPoint, 'shufu', 'secret');
         $this->assertTrue($login);
     }
 
@@ -19,7 +21,7 @@ class ExampleTest extends TestCase
     public function getTasks()
     {
     	$shufuEncoder = new ShufuEncoderSdk;
-        $shufuEncoder->login('http://localhost:8080/api', 'shufu', 'secret');
+        $shufuEncoder->login($this->endPoint, 'shufu', 'secret');
 
         $task = $shufuEncoder->getTasks();
 
@@ -30,7 +32,7 @@ class ExampleTest extends TestCase
     public function getEncodingTasks()
     {
     	$shufuEncoder = new ShufuEncoderSdk;
-        $shufuEncoder->login('http://localhost:8080/api', 'shufu', 'secret');
+        $shufuEncoder->login($this->endPoint, 'shufu', 'secret');
 
         $task = $shufuEncoder->getEncodingTasks();
 
@@ -41,7 +43,7 @@ class ExampleTest extends TestCase
     public function getTask()
     {
     	$shufuEncoder = new ShufuEncoderSdk;
-        $shufuEncoder->login('http://localhost:8080/api', 'shufu', 'secret');
+        $shufuEncoder->login($this->endPoint, 'shufu', 'secret');
 
         $task = $shufuEncoder->getTask(1);
 
@@ -52,7 +54,7 @@ class ExampleTest extends TestCase
     public function getTaskProgress()
     {
     	$shufuEncoder = new ShufuEncoderSdk;
-        $shufuEncoder->login('http://localhost:8080/api', 'shufu', 'secret');
+        $shufuEncoder->login($this->endPoint, 'shufu', 'secret');
 
         $task = $shufuEncoder->getTaskProgress(1);
 
@@ -65,7 +67,7 @@ class ExampleTest extends TestCase
     public function createTask()
     {
     	$shufuEncoder = new ShufuEncoderSdk;
-        $shufuEncoder->login('http://localhost:8080/api', 'shufu', 'secret');
+        $shufuEncoder->login($this->endPoint, 'shufu', 'secret');
 
         $task = $shufuEncoder->createTask(array(
         	"webhook_success" => "https://enpii3jcfpr19.x.pipedream.net",
@@ -84,7 +86,7 @@ class ExampleTest extends TestCase
     public function updateTask()
     {
     	$shufuEncoder = new ShufuEncoderSdk;
-        $shufuEncoder->login('http://localhost:8080/api', 'shufu', 'secret');
+        $shufuEncoder->login($this->endPoint, 'shufu', 'secret');
 
         $task = $shufuEncoder->updateTask(1, array(
         	"webhook_success" => "https://enpii3jcfpr19.x.pipedream.net",
@@ -103,7 +105,7 @@ class ExampleTest extends TestCase
     public function queueTask()
     {
     	$shufuEncoder = new ShufuEncoderSdk;
-        $shufuEncoder->login('http://localhost:8080/api', 'shufu', 'secret');
+        $shufuEncoder->login($this->endPoint, 'shufu', 'secret');
 
         $task = $shufuEncoder->queueTask(1);
         
