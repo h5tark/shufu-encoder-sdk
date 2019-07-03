@@ -2,6 +2,10 @@
 
 All notable changes to `shufu-encoder-sdk` will be documented in this file
 
+## 1.2.1  - 2019-07-03
+
+- Fix package verison
+
 ## 1.2.0  - 2019-07-03
 
 - Allow PHP version >= 5.5.9
