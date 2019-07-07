@@ -218,9 +218,8 @@ class ShufuEncoderSdk
             CURLOPT_FOLLOWLOCATION => false,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => $data,
-            CURLOPT_HTTPHEADER => array("Content-Type: application/json"),
-            CURLOPT_HTTPHEADER => array('Authorization: Bearer ' . $this->accessToken ),
+            CURLOPT_POSTFIELDS => json_encode($data),
+            CURLOPT_HTTPHEADER => array("Content-Type: application/json", 'Authorization: Bearer ' . $this->accessToken),
         ));
 
         $response = curl_exec($curl);
@@ -260,9 +259,8 @@ class ShufuEncoderSdk
             CURLOPT_FOLLOWLOCATION => false,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => $data,
-            CURLOPT_HTTPHEADER => array("Content-Type: application/json"),
-            CURLOPT_HTTPHEADER => array('Authorization: Bearer ' . $this->accessToken ),
+            CURLOPT_POSTFIELDS => json_encode($data),
+            CURLOPT_HTTPHEADER => array("Content-Type: application/json", 'Authorization: Bearer ' . $this->accessToken),
         ));
 
         $response = curl_exec($curl);
@@ -301,9 +299,8 @@ class ShufuEncoderSdk
             CURLOPT_FOLLOWLOCATION => false,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => $data,
-            CURLOPT_HTTPHEADER => array("Content-Type: application/json"),
-            CURLOPT_HTTPHEADER => array('Authorization: Bearer ' . $this->accessToken ),
+            CURLOPT_POSTFIELDS => json_encode($data),
+            CURLOPT_HTTPHEADER => array("Content-Type: application/json", 'Authorization: Bearer ' . $this->accessToken),
         ));
 
         $response = curl_exec($curl);

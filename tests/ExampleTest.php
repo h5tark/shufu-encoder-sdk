@@ -8,6 +8,7 @@ use Hoangstark\ShufuEncoderSdk\ShufuEncoderSdk;
 class ExampleTest extends TestCase
 {
     private $endPoint = 'https://b1d5ff40-c90d-4380-a9ad-9ce190807a21.mock.pstmn.io';
+    //private $endPoint = 'http://localhost:8080/api';
 
     /** @test */
     public function login()
@@ -72,6 +73,28 @@ class ExampleTest extends TestCase
         $task = $shufuEncoder->createTask(array(
         	"webhook_success" => "https://enpii3jcfpr19.x.pipedream.net",
         	"webhook_error" => "https://en4vdjmi70ib.x.pipedream.net/",
+            "encode_formats" => array(
+                array(
+                    "width" => 1280,
+                    "height" => 0,
+                    "video_kilobitrate" => "1500",
+                    "audio_kilobitrate" => "128",
+                    "video_codec" => "libx264",
+                    "audio_codec" => "aac",
+                    "profile" => "main",
+                    "preset" => "veryfast"
+                ),
+                array(
+                    "width" => 720,
+                    "height" => 0,
+                    "video_kilobitrate" => "750",
+                    "audio_kilobitrate" => "128",
+                    "video_codec" => "libx264",
+                    "audio_codec" => "aac",
+                    "profile" => "main",
+                    "preset" => "veryfast",
+                )
+            ),
         ));
 
         $message = '';
@@ -91,6 +114,28 @@ class ExampleTest extends TestCase
         $task = $shufuEncoder->updateTask(1, array(
         	"webhook_success" => "https://enpii3jcfpr19.x.pipedream.net",
         	"webhook_error" => "https://en4vdjmi70ib.x.pipedream.net/",
+            "encode_formats" => array(
+                array(
+                    "width" => 1280,
+                    "height" => 0,
+                    "video_kilobitrate" => "1500",
+                    "audio_kilobitrate" => "128",
+                    "video_codec" => "libx264",
+                    "audio_codec" => "aac",
+                    "profile" => "main",
+                    "preset" => "veryfast"
+                ),
+                array(
+                    "width" => 720,
+                    "height" => 0,
+                    "video_kilobitrate" => "750",
+                    "audio_kilobitrate" => "128",
+                    "video_codec" => "libx264",
+                    "audio_codec" => "aac",
+                    "profile" => "main",
+                    "preset" => "veryfast",
+                )
+            ),
         ));
 
         $message = '';
