@@ -30,7 +30,7 @@ class LoginController extends Controller
     protected function login()
     {
         $shufuEncoder = new ShufuEncoderSdk;
-        $shufuEncoder->login('http://localhost/api/login', 'shufu', 'secret');
+        $shufuEncoder->login('http://localhost/api', 'shufu', 'secret');
         return $shufuEncoder->getAccessToken();
     }
 }
