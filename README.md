@@ -76,6 +76,28 @@ $shufuEncoder->login('http://localhost:8080/api', 'shufu', 'secret');
 $task = $shufuEncoder->createTask(array(
     "webhook_success" => "https://enpii3jcfpr19.x.pipedream.net",
     "webhook_error" => "https://en4vdjmi70ib.x.pipedream.net/",
+    "encode_formats" => array(
+        array(
+            "width" => 1280,
+            "height" => 0,
+            "video_kilobitrate" => "1500",
+            "audio_kilobitrate" => "128",
+            "video_codec" => "libx264",
+            "audio_codec" => "aac",
+            "profile" => "main",
+            "preset" => "veryfast"
+        ),
+        array(
+            "width" => 720,
+            "height" => 0,
+            "video_kilobitrate" => "750",
+            "audio_kilobitrate" => "128",
+            "video_codec" => "libx264",
+            "audio_codec" => "aac",
+            "profile" => "main",
+            "preset" => "veryfast",
+        )
+    ),
 ));
 
 echo $task->message // Task created
@@ -89,6 +111,28 @@ $shufuEncoder->login('http://localhost:8080/api', 'shufu', 'secret');
 $task = $shufuEncoder->updateTask(1, array(
     "webhook_success" => "https://enpii3jcfpr19.x.pipedream.net",
     "webhook_error" => "https://en4vdjmi70ib.x.pipedream.net/",
+    "encode_formats" => array(
+        array(
+            "width" => 1280,
+            "height" => 0,
+            "video_kilobitrate" => "1500",
+            "audio_kilobitrate" => "128",
+            "video_codec" => "libx264",
+            "audio_codec" => "aac",
+            "profile" => "main",
+            "preset" => "veryfast"
+        ),
+        array(
+            "width" => 720,
+            "height" => 0,
+            "video_kilobitrate" => "750",
+            "audio_kilobitrate" => "128",
+            "video_codec" => "libx264",
+            "audio_codec" => "aac",
+            "profile" => "main",
+            "preset" => "veryfast",
+        )
+    ),
 ));
 
 echo $task->message // Task updated
