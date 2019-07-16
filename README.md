@@ -76,6 +76,12 @@ $shufuEncoder->login('http://localhost:8080/api', 'shufu', 'secret');
 $task = $shufuEncoder->createTask(array(
     "webhook_success" => "https://enpii3jcfpr19.x.pipedream.net",
     "webhook_error" => "https://en4vdjmi70ib.x.pipedream.net/",
+    "s3_filename" => "test",
+    "s3_path" => "encoded/a/c",
+    "s3_region" => "eu-central-1",
+    "s3_bucket" => "shufu-encoder",
+    "s3_key" => "...",
+    "s3_secret" => "...",
     "encode_formats" => array(
         array(
             "width" => 1280,
@@ -111,6 +117,12 @@ $shufuEncoder->login('http://localhost:8080/api', 'shufu', 'secret');
 $task = $shufuEncoder->updateTask(1, array(
     "webhook_success" => "https://enpii3jcfpr19.x.pipedream.net",
     "webhook_error" => "https://en4vdjmi70ib.x.pipedream.net/",
+    "s3_filename" => "test",
+    "s3_path" => "encoded/a/c",
+    "s3_region" => "eu-central-1",
+    "s3_bucket" => "shufu-encoder",
+    "s3_key" => "...",
+    "s3_secret" => "...",
     "encode_formats" => array(
         array(
             "width" => 1280,
